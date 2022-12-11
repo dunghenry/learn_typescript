@@ -1,7 +1,7 @@
 name: Node.js CI
 on:
   push:
-    branches: [ "test" ]
+    branches: [ "test", "dev"]
     paths:
       - '!README.md'
       - '!.gitignore'
@@ -10,7 +10,7 @@ on:
       - '!package-lock.json'
       - '!tsconfig.json'
   pull_request:
-    branches: [ "dev", "master", "test" ]
+    branches: [ "dev", "test" ]
 jobs:
   build:
     runs-on: ubuntu-latest
